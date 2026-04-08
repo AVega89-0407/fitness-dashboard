@@ -1,0 +1,15 @@
+@import "tailwindcss";
+
+/* Här kan du definiera dina minimalistiska färger direkt i v4 */
+@theme {
+  --color-background: #f8fafc;
+  --color-card: #ffffff;
+  --color-accent: #818cf8; /* Soft Indigo */
+  --font-sans: 'Inter', sans-serif;
+}
+
+/* En mjuk global bakgrund */
+body {
+  background-color: var(--color-background);
+  color: #1e293b;
+}
