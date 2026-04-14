@@ -1,10 +1,13 @@
 import StepTracker from "../components/charts/StepTracker";
+import WaterTracker from "../components/charts/WaterTracker";
 
 function Dashboard() {
     return (
         <>
-        <h1 className="text-mist-900 text-center">Welcome!</h1>
+        <section>
         <StepTracker />
+        <WaterTracker />
+        </section>
         </>
     )
 }
