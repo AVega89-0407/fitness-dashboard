@@ -12,7 +12,7 @@ const NavItem = ({ icon: Icon, label, active }) => (
 
 function Sidebar() {
     return (
-    <aside className="w-64 bg-card h-screen sticky top-0 border-r border-slate-100 p-6 flex flex-col sm:">
+    <aside className="w-64 bg-card h-screen sticky top-0 border-r border-slate-100 p-6 flex flex-col">
       {/* Logotyp / Appnamn */}
         <div className="flex items-center gap-3 px-4 mb-10">
         <div className="bg-accent p-2 rounded-xl">

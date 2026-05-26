@@ -2,7 +2,7 @@ import { Droplet } from 'lucide-react';
 
 function WaterTracker() {
     return (
-        <section className="p-8 max-w-md mx-auto">
+        <section className="p-8 max-w-md mx-auto flex-1">
             <article className="bg-white p-6 rounded-[2.5rem] shadow-sm border border-slate-100">
                 <div className="flex justify-between items-center mb-6">
                     <h2 className="text-xl font-semibold">Dagens vattenintag</h2>
