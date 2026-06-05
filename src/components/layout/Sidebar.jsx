@@ -1,5 +1,5 @@
 import { Home, BarChart2, User, Settings, Zap } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 const NavItem = ({ icon: Icon, label, active }) => (
 <div className={`flex items-center gap-4 px-4 py-3 rounded-2xl cursor-pointer transition-all
@@ -24,14 +24,30 @@ function Sidebar() {
 
       {/* Navigering */}
     <nav className="flex-1 space-y-2">
-        <Link to='/'><NavItem icon={Home} label="Översikt" active /></Link>
-        <Link to='statistik'><NavItem icon={BarChart2} label="Statistik" /></Link>
-        <Link to='/profile'><NavItem icon={User} label="Profil" /></Link>
+        <NavLink to='/'>
+        {({ isActive }) => (
+        <NavItem icon={Home} label="Översikt" active={isActive}/>
+          )}
+        </NavLink>
+        <NavLink to='statistik'>
+            {({ isActive }) => (
+            <NavItem icon={BarChart2} label="Statistik" active={isActive}/>
+            )}
+            </NavLink>
+        <NavLink to='/profile'>
+        {({ isActive }) => (
+        <NavItem icon={User} label="Profil" active={isActive}/>
+        )}
+        </NavLink>
     </nav>
 
       {/* Nedre del */}
     <div className="pt-6 border-t border-slate-50">
-        <Link to='/settings'><NavItem icon={Settings} label="Inställningar" /></Link>
+        <NavLink to='/settings'>
+        {({ isActive }) => (
+        <NavItem icon={Settings} label="Inställningar" active={isActive}/>
+        )}
+        </NavLink>
     </div>
     </aside>
 );

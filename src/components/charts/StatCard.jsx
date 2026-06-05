@@ -2,7 +2,7 @@ export default function StatCard({ label, value, trend, trendLabel }) {
   const isUp = trend === 'up';
   const isDown = trend === 'down';
   return (
-    <div className="bg-gray-50 rounded-xl p-4">
+    <div className="bg-white rounded-xl p-4">
       <p className="text-xs text-gray-400 mb-1 uppercase tracking-wide">{label}</p>
       <p className="text-xl font-medium text-gray-800">{value}</p>
       {trendLabel && (

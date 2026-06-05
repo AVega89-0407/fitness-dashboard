@@ -12,8 +12,8 @@ export default function ProgressCard({ label, current, max, unit, color, icon, n
   return (
     <div className="bg-white rounded-2xl border border-gray-100 p-5 shadow-sm">
       <div className="flex justify-between items-center mb-2">
-        <span className="font-medium text-gray-800">
-          {icon} {label}
+        <span className="flex font-medium text-gray-800">
+         <p>{label}</p> <p>{icon}</p>
         </span>
         <span className={`text-sm font-semibold px-2 py-0.5 rounded-full ${c.badge}`}>
           {pct}%
