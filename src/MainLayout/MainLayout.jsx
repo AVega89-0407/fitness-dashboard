@@ -1,6 +1,5 @@
 import { Outlet } from "react-router-dom";
 import Sidebar from "../components/layout/Sidebar";
-import Header from "../components/layout/Header";
 
 function MainLayout() {
     return (
@@ -13,10 +12,6 @@ function MainLayout() {
             {/* Höger sida: En flex-container för att stapla Header och Main vertikalt */}
             <div className="flex flex-col h-screen overflow-hidden">
                 
-                {/* Header ligger överst */}
-                <div className="p-4 md:p-6">
-                    <Header />
-                </div>
 
                 {/* Main är scrollbar och fyller resten av ytan */}
                 <main className="flex-1 overflow-y-auto p-4 md:p-8 pt-0">

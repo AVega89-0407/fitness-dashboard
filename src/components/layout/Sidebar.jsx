@@ -1,4 +1,5 @@
 import { Home, BarChart2, User, Settings, Zap } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const NavItem = ({ icon: Icon, label, active }) => (
 <div className={`flex items-center gap-4 px-4 py-3 rounded-2xl cursor-pointer transition-all
@@ -23,14 +24,14 @@ function Sidebar() {
 
       {/* Navigering */}
     <nav className="flex-1 space-y-2">
-        <NavItem icon={Home} label="Översikt" active />
-        <NavItem icon={BarChart2} label="Statistik" />
-        <NavItem icon={User} label="Profil" />
+        <Link to='/'><NavItem icon={Home} label="Översikt" active /></Link>
+        <Link to='statistik'><NavItem icon={BarChart2} label="Statistik" /></Link>
+        <Link to='/profile'><NavItem icon={User} label="Profil" /></Link>
     </nav>
 
       {/* Nedre del */}
     <div className="pt-6 border-t border-slate-50">
-        <NavItem icon={Settings} label="Inställningar" />
+        <Link to='/settings'><NavItem icon={Settings} label="Inställningar" /></Link>
     </div>
     </aside>
 );

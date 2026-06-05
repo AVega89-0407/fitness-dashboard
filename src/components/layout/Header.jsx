@@ -1,10 +1,21 @@
-import { User } from 'lucide-react';
+import Greeting from '../Greeting';
 
 export default function Header() {
+
+          function showDate() {
+    let today = new Date();
+    
+    return today.toLocaleDateString("sv-SE", {
+        weekday: "long", 
+        day: "numeric", 
+        month: "long", 
+    });
+  }
+
     return (
-        <header className="bg-white shadow-sm p-4 mb-6 flex items-center gap-4 rounded-[2.5rem] border border-slate-100 ">
-            <h1 className="text-2xl font-bold text-gray-800">Hälsospårning</h1>
-                <User size={24} className="text-gray-500 ml-auto" />
+        <header className='flex flex-col p-6'>
+            <Greeting />
+            <p className='text-sm'>{showDate()} · Håll kvar tempot, du är nära ditt veckamål!</p>
         </header>
     )
 }
