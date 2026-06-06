@@ -3,7 +3,7 @@ import ProgressCard from "../components/charts/ProgressCard";
 import WeekBarChart from "../components/charts/WeekbarChart";
 import Header from "../components/layout/Header";
 
-import { Droplet } from "lucide-react";
+import { Droplet, Moon, Flame } from "lucide-react";
 
 const weekData = [
   { day: 'Mån', steps: 6200 },
@@ -27,13 +27,13 @@ function Dashboard() {
         <Header />
         <section className="grid grid-cols-3 gap-4">
         <ProgressCard label="Dagens steg" current={7000} max={8200} unit="steg" color="purple" />
-        <ProgressCard label="Vattenintag" icon={<Droplet size={20} color="#dbeafe" fill="#dbeafe"/>} current={1.5} max={2} unit="L" color="blue" note="Du har druckit 1,5 L av 2 L idag">
+        <ProgressCard label="Vattenintag" icon={<Droplet size={20} color="#3b82f6" />} current={1.5} max={2} unit="L" color="blue" note="Du har druckit 1,5 L av 2 L idag">
           <button className="mt-3 w-full bg-indigo-500 text-white rounded-xl py-2 text-sm font-medium hover:bg-indigo-600 transition-colors">
             Logga vattenintag
           </button>
         </ProgressCard>
-        <ProgressCard label="Sömn 🌙" current={7.7} max={9} unit="t" color="violet" note="Somna 23:04 · Vakna 06:46" />
-        <ProgressCard label="Kalorier 🔥" current={1240} max={2000} unit="kcal" color="amber" note="Frukost + lunch loggat" />
+        <ProgressCard label="Sömn" icon={<Moon size={20} color="#fe9a00" />} current={7.7} max={9} unit="t" color="violet" note="Somna 23:04 · Vakna 06:46" />
+        <ProgressCard label="Kalorier" icon={<Flame size={20} color="#fe9a00"/>} current={1240} max={2000} unit="kcal" color="amber" note="Frukost + lunch loggat" />
         <WeekBarChart data={weekData} />
         <ActivityList activities={activities} />
         </section>

@@ -9,10 +9,20 @@ function Greeting() {
     setHour(date.getHours());
   }, []);
 
+  let greeting = "";
+
+  if (hour < 12) {
+    greeting = "God morgon!"
+  } else if (hour < 18) {
+    greeting = "God eftermiddag!"
+  } else {
+    greeting = "God kväll!"
+  }
+
   return (
-    <p className="text-lg">
-      {hour < 12 ? "Godmorgon" : "Godkväll"}, {username}
-    </p>
+    <h1 className="text-2xl">
+      {greeting}, {username}
+    </h1>
   );
 }
 
